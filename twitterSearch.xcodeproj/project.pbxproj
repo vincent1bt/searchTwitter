@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF87CE9D1C8A141A006DDCB6 /* TwitterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF87CE9C1C8A141A006DDCB6 /* TwitterData.swift */; };
 		BF87CE9F1C8A1700006DDCB6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BF87CE9E1C8A1700006DDCB6 /* .gitignore */; };
+		BF87CEA11C8A17EF006DDCB6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BF87CEA01C8A17EF006DDCB6 /* README.md */; };
 		BFA3BC5A1C7F635300483149 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC591C7F635300483149 /* AppDelegate.swift */; };
 		BFA3BC5C1C7F635300483149 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC5B1C7F635300483149 /* ViewController.swift */; };
 		BFA3BC5F1C7F635300483149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA3BC5D1C7F635300483149 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		BF87CE9C1C8A141A006DDCB6 /* TwitterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterData.swift; sourceTree = "<group>"; };
 		BF87CE9E1C8A1700006DDCB6 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BF87CEA01C8A17EF006DDCB6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BFA3BC561C7F635300483149 /* twitterSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitterSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA3BC591C7F635300483149 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFA3BC5B1C7F635300483149 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		BFA3BC4D1C7F635300483149 = {
 			isa = PBXGroup;
 			children = (
+				BF87CEA01C8A17EF006DDCB6 /* README.md */,
 				BF87CE9E1C8A1700006DDCB6 /* .gitignore */,
 				BFA3BC581C7F635300483149 /* twitterSearch */,
 				BFA3BC571C7F635300483149 /* Products */,
@@ -206,6 +209,7 @@
 				BFA3BC781C7F816E00483149 /* MapViewController.swift in Sources */,
 				BFA3BC7E1C7FC90C00483149 /* User.swift in Sources */,
 				BFA3BC801C7FD5FF00483149 /* InfoMapViewController.swift in Sources */,
+				BF87CEA11C8A17EF006DDCB6 /* README.md in Sources */,
 				BF87CE9D1C8A141A006DDCB6 /* TwitterData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
