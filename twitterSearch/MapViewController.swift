@@ -27,6 +27,17 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.textFieldLabel.delegate = self
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        let userID: String? = Twitter.sharedInstance().sessionStore.session()?.userID
+        
+        if  (userID == nil) {
+            if let loginController = self.storyboard?.instantiateViewControllerWithIdentifier("loginController") as? ViewController {
+                self.presentViewController(loginController, animated: true, completion: nil)
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

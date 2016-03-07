@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "twitterSearch/MapViewController.swift"
-            timestampString = "478657778.072677"
+            timestampString = "479079846.197234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "search(_:)"
             landmarkType = "5">
          </BreakpointContent>

@@ -13,18 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let userID: String? = Twitter.sharedInstance().sessionStore.session()?.userID
-        
-        if userID == nil{
-            addLoginButton()
-        }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if let _: String? = Twitter.sharedInstance().sessionStore.session()?.userID {
-            performSegueWithIdentifier("getMap", sender: self)
-        }
+        addLoginButton()
     }
     
     override func didReceiveMemoryWarning() {
