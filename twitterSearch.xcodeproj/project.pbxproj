@@ -26,6 +26,7 @@
 		BFA3BC7E1C7FC90C00483149 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC7D1C7FC90C00483149 /* User.swift */; };
 		BFA3BC801C7FD5FF00483149 /* InfoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */; };
 		BFA64B4C1C80C37000D4A79C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA64B4B1C80C37000D4A79C /* Location.swift */; };
+		BFFD05D01CB3076300F2C6DA /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD05CF1CB3076300F2C6DA /* CustomSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		BFA3BC7D1C7FC90C00483149 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMapViewController.swift; sourceTree = "<group>"; };
 		BFA64B4B1C80C37000D4A79C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BFFD05CF1CB3076300F2C6DA /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,22 +93,55 @@
 		BFA3BC581C7F635300483149 /* twitterSearch */ = {
 			isa = PBXGroup;
 			children = (
-				BFA3BC591C7F635300483149 /* AppDelegate.swift */,
-				BFA3BC5B1C7F635300483149 /* ViewController.swift */,
-				BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */,
-				BFA3BC771C7F816E00483149 /* MapViewController.swift */,
-				BFA3BC7D1C7FC90C00483149 /* User.swift */,
-				BFA64B4B1C80C37000D4A79C /* Location.swift */,
-				BFA3BC7B1C7FA77800483149 /* Data.swift */,
+				BFFD05CE1CB3074300F2C6DA /* Others */,
+				BFFD05CD1CB2F72100F2C6DA /* Default */,
+				BFFD05CC1CB2F70800F2C6DA /* Data */,
+				BFFD05CB1CB2F6C600F2C6DA /* Controllers */,
 				BFA3BC791C7FA6BA00483149 /* SwiftyJSON.swift */,
 				BFA3BC5D1C7F635300483149 /* Main.storyboard */,
 				BFA3BC631C7F635300483149 /* Assets.xcassets */,
-				BFA3BC651C7F635300483149 /* LaunchScreen.storyboard */,
-				BFA3BC681C7F635300483149 /* Info.plist */,
-				BFA3BC601C7F635300483149 /* twitterSearch.xcdatamodeld */,
 				BF87CE9C1C8A141A006DDCB6 /* TwitterData.swift */,
 			);
 			path = twitterSearch;
+			sourceTree = "<group>";
+		};
+		BFFD05CB1CB2F6C600F2C6DA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA3BC771C7F816E00483149 /* MapViewController.swift */,
+				BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */,
+				BFA3BC5B1C7F635300483149 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BFFD05CC1CB2F70800F2C6DA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFA3BC7D1C7FC90C00483149 /* User.swift */,
+				BFA64B4B1C80C37000D4A79C /* Location.swift */,
+				BFA3BC7B1C7FA77800483149 /* Data.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		BFFD05CD1CB2F72100F2C6DA /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				BFA3BC651C7F635300483149 /* LaunchScreen.storyboard */,
+				BFA3BC601C7F635300483149 /* twitterSearch.xcdatamodeld */,
+				BFA3BC681C7F635300483149 /* Info.plist */,
+				BFA3BC591C7F635300483149 /* AppDelegate.swift */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		BFFD05CE1CB3074300F2C6DA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				BFFD05CF1CB3076300F2C6DA /* CustomSegue.swift */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +239,7 @@
 				BFA3BC7C1C7FA77800483149 /* Data.swift in Sources */,
 				BFA3BC5C1C7F635300483149 /* ViewController.swift in Sources */,
 				BFA3BC5A1C7F635300483149 /* AppDelegate.swift in Sources */,
+				BFFD05D01CB3076300F2C6DA /* CustomSegue.swift in Sources */,
 				BFA64B4C1C80C37000D4A79C /* Location.swift in Sources */,
 				BFA3BC7A1C7FA6BA00483149 /* SwiftyJSON.swift in Sources */,
 				BFA3BC781C7F816E00483149 /* MapViewController.swift in Sources */,

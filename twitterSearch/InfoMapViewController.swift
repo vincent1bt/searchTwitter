@@ -17,7 +17,6 @@ enum MapType: Int {
 
 
 class InfoMapViewController: UIViewController, MKMapViewDelegate {
-
     @IBOutlet weak var mapView: MKMapView!
     var locations = [Location]()
     

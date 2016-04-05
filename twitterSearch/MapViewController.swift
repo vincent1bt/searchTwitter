@@ -12,20 +12,63 @@ import MapKit
 
 class MapViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var labelTopConstraint: NSLayoutConstraint!
+    
+    var logOutHidden: Bool = true
     let client = TWTRAPIClient()
+    let clientData = Data.sharedData
+    var locations = [Location]()
+
+    var exitGestor: UISwipeGestureRecognizer!
+    var hiddenGestor: UISwipeGestureRecognizer!
+    var logOutGestor: UITapGestureRecognizer!
     
     @IBOutlet weak var textFieldLabel: UITextField!
-    let clientData = Data.sharedData
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var localizarButton: UIButton!
     
-    var locations = [Location]()
+    var exitView: UIView!
+    var viewShadow: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textFieldLabel.delegate = self
+        configureExtraViews()
+        configureGestures()
+    }
+    
+    func configureExtraViews() {
+        let viewFrame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 0)
+        exitView = UIView(frame: viewFrame)
+        exitView.backgroundColor = UIColor.init(red: 192/255, green: 57/255, blue: 43/255, alpha: 1.0)
+        let exitLabel = UILabel()
+        exitLabel.text = "Salir"
+        exitLabel.textAlignment = .Center
+        exitLabel.textColor = UIColor.whiteColor()
+        exitLabel.frame = CGRect(x: 0, y: 0, width: self.exitView.frame.width, height: 55)
+        exitView.addSubview(exitLabel)
+        self.view.addSubview(exitView)
+        
+        let viewShadowFrame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
+        viewShadow = UIView(frame: viewShadowFrame)
+        viewShadow.backgroundColor = UIColor.blackColor()
+        viewShadow.alpha = 0.5
+        self.view.addSubview(self.viewShadow)
+    }
+    
+    func configureGestures() {
+        self.exitGestor = UISwipeGestureRecognizer(target: self, action: #selector(self.showExit))
+        exitGestor.direction = .Up
+        self.view.addGestureRecognizer(exitGestor)
+        
+        self.hiddenGestor = UISwipeGestureRecognizer(target: self, action: #selector(self.hideExit))
+        hiddenGestor.direction = .Down
+        self.view.addGestureRecognizer(hiddenGestor)
+        
+        self.logOutGestor = UITapGestureRecognizer(target: self, action: #selector(self.logOutFromTwitter))
+        self.exitView.addGestureRecognizer(self.logOutGestor)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -70,13 +113,14 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         self.textFieldLabel.resignFirstResponder()
     }
     
-    @IBAction func logOut(sender: AnyObject) {
+    func logOutFromTwitter() {
         let store = Twitter.sharedInstance().sessionStore
-        
+            
         if let userID = store.session()!.userID {
             store.logOutUserID(userID)
             performSegueWithIdentifier("logIn", sender: self)
         }
+        
     }
     
     @IBAction func textFieldDoneEditing(sender:  UITextField) {
@@ -99,6 +143,36 @@ class MapViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             self.performSegueWithIdentifier("getMapInfo", sender: self)
+        })
+    }
+    
+    func showExit() {
+        guard logOutHidden else {
+            return
+        }
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseInOut, animations: {
+            self.labelTopConstraint.constant -= 40
+            self.exitView.frame = CGRect(x: 0, y: self.view.frame.height - 55, width: self.view.frame.width, height: 55)
+            self.view.layoutIfNeeded()
+            }, completion: { (finished) -> Void in
+                self.viewShadow.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 55)
+                self.logOutHidden = false
+        })
+    }
+    
+    func hideExit() {
+        guard !logOutHidden else {
+         return
+        }
+        self.viewShadow.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseInOut, animations: {
+            self.labelTopConstraint.constant += 40
+            self.exitView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 0)
+            self.view.layoutIfNeeded()
+            }, completion: { (finished) -> Void in
+                self.logOutHidden = true
         })
     }
     
