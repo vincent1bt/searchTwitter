@@ -13,6 +13,7 @@ import MapKit
 class MapViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var labelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var arrowBottomConstraint: NSLayoutConstraint!
     
     var logOutHidden: Bool = true
     let client = TWTRAPIClient()
@@ -23,6 +24,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
     var hiddenGestor: UISwipeGestureRecognizer!
     var logOutGestor: UITapGestureRecognizer!
     
+    @IBOutlet weak var arrowLabel: UILabel!
     @IBOutlet weak var textFieldLabel: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -152,9 +154,13 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         }
         
         UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseInOut, animations: {
+            self.arrowBottomConstraint.constant += 55
+            self.arrowLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))
+            
             self.labelTopConstraint.constant -= 40
             self.exitView.frame = CGRect(x: 0, y: self.view.frame.height - 55, width: self.view.frame.width, height: 55)
             self.view.layoutIfNeeded()
+            
             }, completion: { (finished) -> Void in
                 self.viewShadow.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height - 55)
                 self.logOutHidden = false
@@ -168,9 +174,13 @@ class MapViewController: UIViewController, UITextFieldDelegate {
         self.viewShadow.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
         
         UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseInOut, animations: {
+            self.arrowBottomConstraint.constant -= 55
+            self.arrowLabel.transform = CGAffineTransformMakeRotation(CGFloat(M_PI * 2))
+            
             self.labelTopConstraint.constant += 40
             self.exitView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: 0)
             self.view.layoutIfNeeded()
+            
             }, completion: { (finished) -> Void in
                 self.logOutHidden = true
         })

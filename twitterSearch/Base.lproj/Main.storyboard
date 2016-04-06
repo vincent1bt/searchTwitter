@@ -158,6 +158,8 @@
                     <navigationItem key="navigationItem" title="Buscar" id="6Gd-yu-ov7"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="arrowBottomConstraint" destination="b6v-mz-0Te" id="qk0-nH-KhZ"/>
+                        <outlet property="arrowLabel" destination="kmm-eu-oNB" id="d1l-4y-eDF"/>
                         <outlet property="imageView" destination="nq2-u5-Gir" id="CpT-SH-52g"/>
                         <outlet property="labelTopConstraint" destination="Gd2-hm-wgD" id="ljC-Js-eo5"/>
                         <outlet property="localizarButton" destination="aEu-PQ-pdc" id="Aym-7K-RAn"/>
