@@ -26,8 +26,19 @@
 		BFA3BC7E1C7FC90C00483149 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC7D1C7FC90C00483149 /* User.swift */; };
 		BFA3BC801C7FD5FF00483149 /* InfoMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */; };
 		BFA64B4C1C80C37000D4A79C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA64B4B1C80C37000D4A79C /* Location.swift */; };
+		BFBEC2211CE546110072FB59 /* twitterSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC2201CE546110072FB59 /* twitterSearchTests.swift */; };
 		BFFD05D01CB3076300F2C6DA /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD05CF1CB3076300F2C6DA /* CustomSegue.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFBEC2231CE546110072FB59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFA3BC4E1C7F635300483149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA3BC551C7F635300483149;
+			remoteInfo = twitterSearch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BF87CE9C1C8A141A006DDCB6 /* TwitterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterData.swift; sourceTree = "<group>"; };
@@ -51,6 +62,9 @@
 		BFA3BC7D1C7FC90C00483149 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BFA3BC7F1C7FD5FF00483149 /* InfoMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoMapViewController.swift; sourceTree = "<group>"; };
 		BFA64B4B1C80C37000D4A79C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BFBEC21E1CE546110072FB59 /* twitterSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twitterSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFBEC2201CE546110072FB59 /* twitterSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twitterSearchTests.swift; sourceTree = "<group>"; };
+		BFBEC2221CE546110072FB59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFFD05CF1CB3076300F2C6DA /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +79,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFBEC21B1CE546110072FB59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,6 +95,7 @@
 				BF87CEA01C8A17EF006DDCB6 /* README.md */,
 				BF87CE9E1C8A1700006DDCB6 /* .gitignore */,
 				BFA3BC581C7F635300483149 /* twitterSearch */,
+				BFBEC21F1CE546110072FB59 /* twitterSearchTests */,
 				BFA3BC571C7F635300483149 /* Products */,
 				BFA3BC6F1C7F699600483149 /* Fabric.framework */,
 				BFA3BC701C7F699600483149 /* TwitterKit.framework */,
@@ -86,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA3BC561C7F635300483149 /* twitterSearch.app */,
+				BFBEC21E1CE546110072FB59 /* twitterSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +126,15 @@
 				BF87CE9C1C8A141A006DDCB6 /* TwitterData.swift */,
 			);
 			path = twitterSearch;
+			sourceTree = "<group>";
+		};
+		BFBEC21F1CE546110072FB59 /* twitterSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFBEC2201CE546110072FB59 /* twitterSearchTests.swift */,
+				BFBEC2221CE546110072FB59 /* Info.plist */,
+			);
+			path = twitterSearchTests;
 			sourceTree = "<group>";
 		};
 		BFFD05CB1CB2F6C600F2C6DA /* Controllers */ = {
@@ -165,19 +197,42 @@
 			productReference = BFA3BC561C7F635300483149 /* twitterSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFBEC21D1CE546110072FB59 /* twitterSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFBEC2251CE546110072FB59 /* Build configuration list for PBXNativeTarget "twitterSearchTests" */;
+			buildPhases = (
+				BFBEC21A1CE546110072FB59 /* Sources */,
+				BFBEC21B1CE546110072FB59 /* Frameworks */,
+				BFBEC21C1CE546110072FB59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFBEC2241CE546110072FB59 /* PBXTargetDependency */,
+			);
+			name = twitterSearchTests;
+			productName = twitterSearchTests;
+			productReference = BFBEC21E1CE546110072FB59 /* twitterSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BFA3BC4E1C7F635300483149 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "vicente rodriguez";
 				TargetAttributes = {
 					BFA3BC551C7F635300483149 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = BJRVSDXBD2;
+					};
+					BFBEC21D1CE546110072FB59 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = BJRVSDXBD2;
+						TestTargetID = BFA3BC551C7F635300483149;
 					};
 				};
 			};
@@ -195,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				BFA3BC551C7F635300483149 /* twitterSearch */,
+				BFBEC21D1CE546110072FB59 /* twitterSearchTests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,6 +265,13 @@
 				BFA3BC671C7F635300483149 /* LaunchScreen.storyboard in Resources */,
 				BFA3BC641C7F635300483149 /* Assets.xcassets in Resources */,
 				BFA3BC5F1C7F635300483149 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFBEC21C1CE546110072FB59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +313,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFBEC21A1CE546110072FB59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFBEC2211CE546110072FB59 /* twitterSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFBEC2241CE546110072FB59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA3BC551C7F635300483149 /* twitterSearch */;
+			targetProxy = BFBEC2231CE546110072FB59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BFA3BC5D1C7F635300483149 /* Main.storyboard */ = {
@@ -385,6 +464,34 @@
 			};
 			name = Release;
 		};
+		BFBEC2261CE546110072FB59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = twitterSearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vicenterodriguez.twitterSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitterSearch.app/twitterSearch";
+			};
+			name = Debug;
+		};
+		BFBEC2271CE546110072FB59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = twitterSearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vicenterodriguez.twitterSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twitterSearch.app/twitterSearch";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,6 +512,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BFBEC2251CE546110072FB59 /* Build configuration list for PBXNativeTarget "twitterSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFBEC2261CE546110072FB59 /* Debug */,
+				BFBEC2271CE546110072FB59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 

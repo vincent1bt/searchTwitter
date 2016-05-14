@@ -4,6 +4,8 @@ App para buscar a usuarios de twitter que tengan activada la localización en su
 
 ##Descripción##
 ![twitter search](http://res.cloudinary.com/vincent1bt/image/upload/v1462492838/ezgif.com-video-to-gif_1_suk0z4.gif "Video demo")
+
+
 Esta hecha con swift, fabric y la api de twitter.
 
 Uso SwiftyJSON para manejar las respuestas de tipo json ya que sin esta libreria es horrible manejar json en swift, recomiendo que la vean.

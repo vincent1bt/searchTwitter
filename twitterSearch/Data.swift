@@ -47,7 +47,7 @@ struct Data {
     }
     
     func makeRequest(params: [String: String], endPoint: String, onCompletion: Response) {
-        if let userID = Twitter.sharedInstance().sessionStore.session()!.userID {
+        if let userID = Twitter.sharedInstance().sessionStore.session()?.userID {
             //usa el cliente que inicio sesion en twitter
             let client = TWTRAPIClient(userID: userID)
             

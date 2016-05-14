@@ -198,6 +198,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
             
             if geo {
                 let id = json[0]["id"].object as! Int
+                print(id)
                 let name = json[0]["name"].object as? String
                 let image = json[0]["profile_image_url_https"].object as? String
                 
